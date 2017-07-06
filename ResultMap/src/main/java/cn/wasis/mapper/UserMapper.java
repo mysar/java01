@@ -1,8 +1,8 @@
-package com.kaishengit.mapper;
+package cn.wasis.mapper;
 
 import java.util.List;
 
-import com.kaishengit.entity.User;
+import cn.wasis.entity.User;
 
 public interface UserMapper {
 

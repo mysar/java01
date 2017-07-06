@@ -1,6 +1,6 @@
-package com.kaishengit.mapper;
+package cn.wasis.mapper;
 
-import com.kaishengit.entity.Dept;
+import cn.wasis.entity.Dept;
 
 public interface DeptMapper {
 

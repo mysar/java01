@@ -1,4 +1,4 @@
-package com.kaishengit.util;
+package cn.wasis.util;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -11,36 +11,36 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 public class MyBatisUtil {
 
 	/**
-	 * SqlSessionFactory ¾²Ì¬£¬Õû¸öÏµÍ³ÖĞÔËĞĞÊ±Ö»ÓĞÒ»·İ(µ¥Àı)
+	 * SqlSessionFactory é™æ€ï¼Œæ•´ä¸ªç³»ç»Ÿä¸­è¿è¡Œæ—¶åªæœ‰ä¸€ä»½(å•ä¾‹)
 	 */
 	private static SqlSessionFactory sessionFactory = builderSessionFactory();
 
 	private static SqlSessionFactory builderSessionFactory() {
 		try {
-			//1. ¼ÓÔØÅäÖÃÎÄ¼ş
+			//1. åŠ è½½é…ç½®æ–‡ä»¶
 			Reader reader = Resources.getResourceAsReader("mybatis.xml");
-			//2. ´´½¨SqlSessionFactory
+			//2. åˆ›å»ºSqlSessionFactory
 			SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
 			return sqlSessionFactoryBuilder.build(reader);
 		} catch (IOException e) {
-			throw new RuntimeException("¶ÁÈ¡MyBaitsÅäÖÃÎÄ¼şÒì³£",e);
+			throw new RuntimeException("è¯»å–MyBaitsé…ç½®æ–‡ä»¶å¼‚å¸¸",e);
 		}
 	}
-	
+
 	/**
-	 * »ñÈ¡SqlSessionFactory
+	 * è·å–SqlSessionFactory
 	 * @return
 	 */
 	public static SqlSessionFactory getSqlSessionFactory() {
 		return sessionFactory;
 	}
-	
+
 	/**
-	 * »ñÈ¡SqlSession
+	 * è·å–SqlSession
 	 * @return
 	 */
 	public static SqlSession getSqlSession() {
 		return getSqlSessionFactory().openSession();
 	}
-	
+
 }

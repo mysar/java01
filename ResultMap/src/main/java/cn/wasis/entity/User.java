@@ -1,4 +1,4 @@
-package com.kaishengit.entity;
+package cn.wasis.entity;
 
 public class User {
 
