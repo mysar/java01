@@ -8,4 +8,8 @@ Hibernate
 
 
 #### 使用工具  
->IDEA
+>IDEA  
+Maven
+
+#### 使用数据库
+>Mysql
